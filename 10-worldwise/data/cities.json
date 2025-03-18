@@ -37,15 +37,27 @@
       "id": "98443197"
     },
     {
-      "id": "4190",
-      "cityName": "Valdeverdeja",
+      "id": "e9e5",
+      "cityName": "Almodovar del Campo",
       "country": "Spain",
       "emoji": "🇪🇸",
-      "date": "2025-03-18T02:39:18.361Z",
+      "date": "2025-03-18T03:47:38.546Z",
       "notes": "",
       "position": {
-        "lat": "39.795827823893866",
-        "lng": "-5.3002267978361814"
+        "lat": "38.65657600355605",
+        "lng": "-4.50248809245701"
+      }
+    },
+    {
+      "id": "bd58",
+      "cityName": "Olula del Rio",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-03-18T03:49:25.623Z",
+      "notes": "",
+      "position": {
+        "lat": "37.37683487139017",
+        "lng": "-2.2825962303857454"
       }
     }
   ]
