@@ -47,42 +47,6 @@
         "lat": "39.795827823893866",
         "lng": "-5.3002267978361814"
       }
-    },
-    {
-      "id": "74f2",
-      "cityName": "Las Labores",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2025-03-18T02:42:53.234Z",
-      "notes": "",
-      "position": {
-        "lat": "39.169003320071894",
-        "lng": "-3.469469107136721"
-      }
-    },
-    {
-      "id": "ee0e",
-      "cityName": "Fuencaliente",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2025-03-18T02:45:18.104Z",
-      "notes": "",
-      "position": {
-        "lat": "38.46697377952035",
-        "lng": "-4.34761176766239"
-      }
-    },
-    {
-      "id": "4901",
-      "cityName": "Campillo de Llerena",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2025-03-18T02:48:08.792Z",
-      "notes": "",
-      "position": {
-        "lat": "38.52463687320855",
-        "lng": "-5.7449869853398585"
-      }
     }
   ]
 }
