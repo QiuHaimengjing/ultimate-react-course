@@ -6,6 +6,7 @@ import Form from "../../ui/Form";
 import Button from "../../ui/Button";
 import FileInput from "../../ui/FileInput";
 import Textarea from "../../ui/Textarea";
+import { useCabins } from "../../hooks/useCabins";
 
 const FormRow = styled.div`
   display: grid;
@@ -44,10 +45,14 @@ const Error = styled.span`
 `;
 
 function CreateCabinForm() {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
+
+  const { isCreating, handleCreateCabin } = useCabins();
 
   function onSubmit(data) {
-    console.log(data);
+    handleCreateCabin(data, {
+      onSuccess: () => reset(),
+    });
   }
 
   return (
@@ -97,7 +102,7 @@ function CreateCabinForm() {
         <Button variation="secondary" type="reset">
           Cancel
         </Button>
-        <Button>Add cabin</Button>
+        <Button disabled={isCreating}>Add cabin</Button>
       </FormRow>
     </Form>
   );
