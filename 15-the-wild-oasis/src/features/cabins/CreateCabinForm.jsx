@@ -5,10 +5,15 @@ import Form from "../../ui/Form";
 import Button from "../../ui/Button";
 import FileInput from "../../ui/FileInput";
 import Textarea from "../../ui/Textarea";
-import { useCabins } from "../../hooks/useCabins";
 import FormRow from "../../ui/FormRow";
+import { useCreateCabin } from "./useCreateCabin";
+import { useEditCabin } from "./useEditCabin";
 
 function CreateCabinForm({ cabinToEdit = {} }) {
+  const { isCreating, createCabin } = useCreateCabin();
+  const { isEditing, editCabin } = useEditCabin();
+  const isWorking = isCreating || isEditing;
+
   const { id: editId, ...editValues } = cabinToEdit;
   const isEditSession = Boolean(editId);
 
@@ -17,15 +22,18 @@ function CreateCabinForm({ cabinToEdit = {} }) {
   });
   const { errors } = formState;
 
-  const { isWorking, handleCreateCabin, handleEditCabin } = useCabins();
-
   function onSubmit(data) {
     const image = typeof data.image === "string" ? data.image : data.image[0];
 
     if (isEditSession)
-      handleEditCabin({ newCabinData: { ...data, image }, id: editId });
+      editCabin(
+        { newCabinData: { ...data, image }, id: editId },
+        {
+          onSuccess: () => reset({ ...data, image }),
+        }
+      );
     else
-      handleCreateCabin(
+      createCabin(
         { ...data, image: image },
         {
           onSuccess: () => reset(),
@@ -33,7 +41,9 @@ function CreateCabinForm({ cabinToEdit = {} }) {
       );
   }
 
-  function onError(errors) {}
+  function onError(errors) {
+    console.log(errors);
+  }
 
   return (
     <Form onSubmit={handleSubmit(onSubmit, onError)}>
