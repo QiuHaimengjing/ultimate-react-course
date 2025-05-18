@@ -14,6 +14,7 @@ import AppLayout from "./ui/AppLayout";
 import { Toaster } from "react-hot-toast";
 import Booking from "./pages/Booking";
 import Checkin from "./pages/Checkin";
+import ProtectedRoute from "./ui/ProtectedRoute";
 
 const toasterStyle = {
   fontSize: "16px",
@@ -38,7 +39,13 @@ function App() {
       <GlobalStyles />
       <BrowserRouter>
         <Routes>
-          <Route element={<AppLayout />}>
+          <Route
+            element={
+              <ProtectedRoute>
+                <AppLayout />
+              </ProtectedRoute>
+            }
+          >
             <Route index element={<Navigate replace to="dashboard" />} />
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="account" element={<Account />} />
