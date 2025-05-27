@@ -1,6 +1,6 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import toast from "react-hot-toast";
 import { updateBooking } from "../../services/apiBookings";
+import { toast } from "react-hot-toast";
 
 export function useCheckout() {
   const queryClient = useQueryClient();
@@ -12,7 +12,7 @@ export function useCheckout() {
       }),
 
     onSuccess: (data) => {
-      toast.success(`Booking #${data.id} has been checked out successfully!`);
+      toast.success(`Booking #${data.id} successfully checked out`);
       queryClient.invalidateQueries({ active: true });
     },
 
