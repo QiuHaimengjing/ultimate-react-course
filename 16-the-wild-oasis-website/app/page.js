@@ -1,3 +1,10 @@
+import Navigation from "./components/Navigation";
+
 export default function page() {
-  return <h1>Hello Next.js</h1>;
+  return (
+    <div>
+      <Navigation />
+      <h1>Hello Next.js</h1>
+    </div>
+  );
 }
