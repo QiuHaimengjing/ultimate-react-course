@@ -1,3 +1,3 @@
-export default async function Page() {
+export default function Page() {
   return <h1>Cabins</h1>;
 }
