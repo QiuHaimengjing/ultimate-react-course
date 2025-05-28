@@ -8,12 +8,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <header>
-        <Logo />
-        <Navigation />
-      </header>
-      <main>{children}</main>
-      <footer>Copyright by The Wild Oasis</footer>
+      <body>
+        <header>
+          <Logo />
+          <Navigation />
+        </header>
+        <main>{children}</main>
+        <footer>Copyright by The Wild Oasis</footer>
+      </body>
     </html>
   );
 }
