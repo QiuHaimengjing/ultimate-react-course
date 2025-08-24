@@ -23,8 +23,8 @@ This repository contains the source code for the Udemy course "The Ultimate Reac
 
 Projects 15-the-wild-oasis and 16-the-wild-oasis-website are deployed on Vercel and can be accessed via the following links:
 
-- [The Wild Oasis](https://oasis.invictusqiu.top/)
-- [The Wild Oasis Website](https://oasisite.invictusqiu.top/)
+- [The Wild Oasis](https://oasis.qiuhaijun.com/)
+- [The Wild Oasis Website](https://oasisite.qiuhaijun.com/)
 
 # Development
 
